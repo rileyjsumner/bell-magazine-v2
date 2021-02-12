@@ -1,0 +1,10 @@
+{
+  "name": "bell-magazine-v2",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "start": "docker-compose up -d"
+  }
+}
