@@ -5,7 +5,7 @@
   "author": "",
   "private": true,
   "scripts": {
-    "start": "docker-compose up -d"
+    "start": "npm i && docker-compose up -d"
   },
   "devDependencies": {
     "docker-compose": "^0.23.6"
