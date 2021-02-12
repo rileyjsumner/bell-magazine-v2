@@ -5,9 +5,6 @@
   "author": "",
   "private": true,
   "scripts": {
-    "start": "npm i && docker-compose up -d"
-  },
-  "devDependencies": {
-    "docker-compose": "^0.23.6"
+    "start": "npm install --save-dev docker-compose && docker-compose up -d"
   }
 }
