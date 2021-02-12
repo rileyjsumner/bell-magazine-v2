@@ -13,7 +13,7 @@
         </tr>
         <tr v-bind:key="post.id" v-for="post in posts">
           <td>{{ post.title }}</td>
-          <td>{{ post.description }}</td>
+          <td>{{ post.abstract }}</td>
           <td align="center">
             <router-link v-bind:to="{ name: 'EditPost', params: { id: post._id } }">Edit</router-link> |
             <a href="#" @click="deletePost(post._id)">Delete</a>
@@ -31,7 +31,7 @@
 <script>
 import PostsService from '@/services/PostsService'
 export default {
-  name: 'posts',
+  name: 'Posts',
   data () {
     return {
       posts: []
@@ -47,7 +47,7 @@ export default {
     },
     async deletePost (id) {
       await PostsService.deletePost(id)
-      this.getPosts()
+      await this.getPosts()
       this.$router.push({ name: 'Posts' })
     }
   }

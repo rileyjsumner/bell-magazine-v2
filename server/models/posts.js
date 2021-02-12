@@ -1,10 +1,16 @@
-var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-var PostSchema = new Schema({
+const PostSchema = new Schema({
   title: String,
-  description: String
+  author_slug: Array,
+  abstract: String,
+  publish_date: Date,
+  content: String,
+  photo_url: String,
+  category_slug: String,
+  slug: String
 });
 
-var Post = mongoose.model("Post", PostSchema);
+const Post = mongoose.model("Post", PostSchema);
 module.exports = Post;
