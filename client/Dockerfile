@@ -9,8 +9,6 @@ WORKDIR /data/
 
 ENV NODE_ENV=production
 
-RUN npm run build
-
 EXPOSE 8080
 
 ENTRYPOINT ["/entrypoint/entrypoint.sh"]
