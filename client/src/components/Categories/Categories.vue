@@ -38,10 +38,10 @@ export default {
     }
   },
   mounted () {
-    this.getCategories()
+    this.getAllCategories()
   },
   methods: {
-    async getCategories () {
+    async getAllCategories () {
       const response = await CategoriesService.fetchCategories()
       this.categories = response.data.categories
     },

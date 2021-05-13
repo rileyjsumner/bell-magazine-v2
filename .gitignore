@@ -7,3 +7,30 @@ node_modules/
 .idea/
 
 
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-Black.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-BlackItalic.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-Bold.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-BoldItalic.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-ExtraBoldItalic.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-ExtraLight.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-ExtraLightItalic.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-Italic.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-Light.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-LightItalic.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-Medium.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-MediumItalic.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-SemiBold.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-SemiBoldItalic.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-Thin.ttf
+src/assets/fonts/fira-sans-extra-condensed/FiraSansExtraCondensed-ThinItalic.ttf
+src/assets/fonts/fira-sans-extra-condensed/OFL.txt
+src/assets/fonts/open-sans/Apache License.txt
+src/assets/fonts/open-sans/OpenSans-Bold.ttf
+src/assets/fonts/open-sans/OpenSans-BoldItalic.ttf
+src/assets/fonts/open-sans/OpenSans-ExtraBold.ttf
+src/assets/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf
+src/assets/fonts/open-sans/OpenSans-Italic.ttf
+src/assets/fonts/open-sans/OpenSans-Light.ttf
+src/assets/fonts/open-sans/OpenSans-LightItalic.ttf
+src/assets/fonts/open-sans/OpenSans-Semibold.ttf
+src/assets/fonts/open-sans/OpenSans-SemiboldItalic.ttf

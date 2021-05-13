@@ -1,8 +1,11 @@
-import Api from '@/services/Api'
+import Api from './Api'
 
 export default {
   fetchCategories () {
     return Api().get('categories')
+  },
+  getPostsInCategory (slug) {
+    return Api().get('categories/' + slug + '/posts')
   },
 
   addCategory (params) {

@@ -1,4 +1,4 @@
-import Api from '@/services/Api'
+import Api from './Api'
 
 export default {
   fetchAuthors () {
@@ -13,8 +13,12 @@ export default {
     return Api().put('authors/' + params.id, params)
   },
 
-  getAuthor (params) {
-    return Api().get('author/' + params.id)
+  getAuthor (slug) {
+    return Api().get('author/slug/' + slug)
+  },
+
+  getPostsByAuthor (slug) {
+    return Api().get('author/' + slug + '/posts')
   },
 
   deleteAuthor (id) {

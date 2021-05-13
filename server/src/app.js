@@ -16,7 +16,8 @@ app.use(cors())
 const mongoose = require('mongoose');
 
 const DATABASE_URL = process.env.DATABASE_URL || 'http://localhost'
-mongoose.connect(`mongodb://${DATABASE_URL}/posts`, { useNewUrlParser: true });
+console.log("DB_URL: ", DATABASE_URL);
+mongoose.connect(`mongodb://${DATABASE_URL}/belluwmadison`);
 
 const db = mongoose.connection;
 
@@ -26,7 +27,8 @@ db.on('error', function (error) {
   // See: https://github.com/Automattic/mongoose/issues/5169
   if (error.message && error.message.match(/failed to connect to server .* on first connect/)) {
     setTimeout(function () {
-      mongoose.connect(`mongodb://${DATABASE_URL}/posts`, { useNewUrlParser: true }).catch(() => {
+      mongoose.connect(`mongodb://${DATABASE_URL}/belluwmadison`).catch(() => {
+        console.log("Empty Catch clause");
         // empty catch avoids unhandled rejections
       });
     }, 20 * 1000);
@@ -55,7 +57,7 @@ app.get('/authors', (req, res) => {
     res.send({
       authors: authors
     })
-  }).sort({_id:-1})
+  }).sort({rank:-1})
 });
 app.get('/categories', (req, res) => {
   Category.find({}, function(error, categories) {
@@ -154,6 +156,43 @@ app.get('/category/:id', (req, res) => {
     res.send(category)
   })
 });
+
+app.get('/post/slug/:slug', (req, res) => {
+  let db = req.db;
+  console.log(req.params.slug)
+  Post.find({ slug: req.params.slug }, function(error, post) {
+    if (error) { console.error(error); }
+    console.log(post);
+    res.send(post)
+  })
+})
+
+app.get('/author/slug/:slug', (req, res) => {
+  let db = req.db;
+  console.log(req.params.slug)
+  Author.find({ slug: req.params.slug }, function(error, author) {
+    if (error) { console.error(error); }
+    console.log(author);
+    res.send(author)
+  })
+})
+
+app.get('/author/:slug/posts', (req, res) => {
+  let db = req.db;
+  Post.find({ author_slug: req.params.slug }, function(error, posts) {
+    if (error) { console.error(error); }
+    res.send(posts);
+  })
+})
+
+app.get('/categories/:slug/posts', (req, res) => {
+  let db = req.db;
+  Post.find({ category_slug: req.params.slug }, function(error, posts) {
+    if (error) { console.error(error); }
+    res.send(posts);
+  })
+})
+
 // Update
 app.put('/posts/:id', (req, res) => {
   let db = req.db;

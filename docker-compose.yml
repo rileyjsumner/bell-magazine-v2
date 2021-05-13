@@ -22,11 +22,11 @@ services:
     depends_on:
       - server-database
     environment:
-      - DATABASE_URL=server-database:27017
+      - DATABASE_URL=server-database
 
   server-database:
     container_name: "bell_db"
-    image: mongo
+    image: library/mongo:latest
     ports:
       - 27017:27017
     volumes:

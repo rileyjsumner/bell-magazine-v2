@@ -59,7 +59,7 @@ export default {
       })
       this.title = response.data.title
       this.author_slug = response.data.author_slug
-      this.publish_date = response.data.publish_date
+      this.publish_date = response.data.publish_date.substring(0, 16)
       this.content = response.data.content
       this.slug = response.data.slug
       this.photo_url = response.data.photo_url
